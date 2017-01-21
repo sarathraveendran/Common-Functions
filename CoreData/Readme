@@ -1,0 +1,41 @@
+Usage
+######
+
+0. Remove core data codes from app delegate if any and add the following
+~~~~~~~~~~~~~
+CDHelper.initializeWithContext()
+~~~~~~~~~~~~~
+       
+
+1. Check core DataHelper usage in repository, Imaplement the same.
+
+Save modal class to coredata
+----------------------------
+
+1. make modal like follows
+2. attributes type to -> transformable in coredata entity
+3. Modal calls data type as Any
+
+~~~~~~~~~~~~~~~~~~~
+class LoginData: NSObject, NSCoding {
+    var token: String?
+    
+    // Transformable Modal Fetch & Retrival DB
+    private static let key_token = "token"
+   
+    override init() {
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        token = aDecoder.decodeObject(forKey:LoginData.key_token) as? String
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(token, forKey: LoginData.key_token)
+    }
+
+}
+~~~~~~~~~~~~~~~~~~~~
+Fetch and save same as coredata helper entity repo
+
+
