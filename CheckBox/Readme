@@ -1,0 +1,8 @@
+Usage
+----
+
+0. Add two images named -> checkbox_checked and checkbox_unchecked to your project
+1. Add a button and choose the class as CheckBox
+2. Add delegate for the button if would like to listen
+3. Add delegate function
+3. for values -> checkBox.isChecked -> expected true or false
