@@ -1,0 +1,6 @@
+Usage
+-----
+
+let indicator = LoadingView()
+indicator.showLoadingIndicator(forView: self.view)
+indicator.hideLoadingIndicator()        

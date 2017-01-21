@@ -1,0 +1,15 @@
+   
+   
+   Usage
+   -----
+   
+   
+   // Display error view
+    func loadErrorView(error: String) {
+        
+        let errorViewController = ErrorDisplayViewController()
+        errorViewController.errorString = error
+        let navigation = UINavigationController(rootViewController: errorViewController)
+        UIApplication.shared.keyWindow?.rootViewController?.present(navigation, animated: true, completion: nil)
+        
+    }

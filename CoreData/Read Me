@@ -1,0 +1,32 @@
+# Usage
+
+Change the modeal calls as follows
+----------------------------------
+public class LoginUser: NSManagedObject, CDHelperEntity {
+    public static var entityName: String! { return "LoginUser" }
+}
+
+Save modal class object direct to core data
+-------------------------------------------
+class LoginData: NSObject, NSCoding {
+    var token: String?
+    
+    // Transformable Modal Fetch & Retrival DB
+    private static let key_token = "token"
+   
+    override init() {
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        token = aDecoder.decodeObject(forKey:LoginData.key_token) as? String
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(token, forKey: LoginData.key_token)
+    }
+}
+
+
+Data Retrieval process
+----------------------
+Check CoreData Helper repository

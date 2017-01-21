@@ -1,0 +1,20 @@
+Usage
+-----
+
+
+// prepare Network action
+var params = Dictionary<String, Any>()
+params[getPostKeys.email] = "email@email.com"
+ 
+networkHanlder.post(url: urls.login, params: params, showLoader: true, vc: self) { (networkStatus, response) in
+           
+  if !networkStatus {
+        // noConnection
+   }
+   // Parse here
+   if let _response = response {
+   
+   }
+   
+}
+       

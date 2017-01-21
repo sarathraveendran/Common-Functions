@@ -1,0 +1,18 @@
+usage
+-----
+
+var radioButtonController: RadioButtonController?
+    
+radioButtonController = RadioButtonController(buttons: mRadioButton, fmRadioButton)
+radioButtonController!.delegate = self
+radioButtonController!.shouldLetDeSelect = false
+mRadioButton.isSelected = true
+
+
+extension ViewCon :  DateSelectorDelegate {
+    
+    // Selected Radio button
+    func didSelectRadioButton(selectedRadio: RadioButton) {
+    }
+    
+}

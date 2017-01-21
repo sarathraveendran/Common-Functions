@@ -1,0 +1,16 @@
+Modules
+-------
+
+1. Add dashed line border
+2. Add constraints - visual format string
+
+
+Usage
+-----
+
+1. add constraint
+~~~~~~~~~~~~~~~~~
+let newView = UIView()
+parentView.addSubview(newView)
+parentView.addConstraintsWithFormat("H:|[v0]|", views: newView)
+        
