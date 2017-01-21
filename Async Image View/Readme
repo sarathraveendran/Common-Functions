@@ -1,0 +1,4 @@
+Usage
+-----
+yourImageView.loadImageFromUrl(your url here)
+
